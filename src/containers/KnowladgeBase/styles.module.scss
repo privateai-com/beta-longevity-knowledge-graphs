@@ -1,0 +1,209 @@
+.table_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-right: 10px;
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: 1fr
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    // grid-template-columns: 1fr
+  }
+}
+
+.table_row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // background-color: var(--bg-color);
+  background-color: var(--bg-color-type-1);
+  border-radius: 14px;
+  // align-items: flex-start;
+  // display: grid;
+
+  // width: 50%;
+  // width: 100%;
+  position: relative;
+  gap: 0px;
+  // grid-template-columns: repeat(2,1fr);
+  // grid-template-columns: 1.75fr 1.5fr 1fr 1fr 1fr;
+  span {
+    padding: 20px;
+  }
+  span:first-child {
+    padding-left: 32px;
+  }
+  span:last-child {
+    padding-right: 32px;
+  }
+
+  // &:nth-child(odd){
+  //     border-right: 1px solid var(--divider-color);
+  // }
+  color: var(--secondary-text-color);
+  // border-bottom: 1px solid var(--divider-color);
+}
+
+.table_row:last-child {
+  // border-bottom: none
+}
+
+.table_head {
+  // padding: 20px;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+  background-color: var(--bg-color-type-1);
+  border-radius: 16px;
+  border-bottom: none;
+}
+
+.table_col {
+  padding: 20px;
+  overflow-wrap: anywhere;
+  position: relative;
+  hyphens: auto;
+}
+
+.table_col:first-child {
+  // padding-left: 32px;
+  // grid-column: 1 / 3;
+}
+
+.table_col:last-child {
+  padding-right: 32px;
+}
+
+.page_head {
+  padding: 20px 0;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.6fr) 3fr;
+  align-items: flex-start;
+  gap: 20px;
+  @media screen and (max-width: 1024px) {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 824px) {
+  .table_row {
+    a {
+      width: 100%;
+      svg {
+        width: 100%;
+        max-width: 100% !important;
+      }
+    }
+    // display: grid;
+    grid-template-columns: 1fr;
+    // repeat(2,1fr);
+    // border-bottom: 1px solid var(--divider-color);
+    // flex-direction: column;
+  }
+  .table_col {
+    // padding-bottom: 0;
+    // padding-left: 0;
+    // padding-right: 0;
+  }
+
+  .table_col:last-child {
+    padding-bottom: 20px;
+    padding-right: 0;
+  }
+
+  // .table_col:nth-child(1){
+  //     grid-column-start: 1;
+  //     grid-column-end: 3;
+  // }
+  // .table_col:nth-child(2){
+  //     grid-column-start: 1;
+  //     grid-column-end: 3;
+  // }
+  // .table_col:nth-child(5){
+  //     // padding: 0;
+  //     grid-column-start: 1;
+  //     grid-column-end: 3;
+  // }
+
+  .table_row:last-child {
+    border-bottom: none;
+  }
+  .table_head {
+    display: none;
+  }
+}
+
+.table_body {
+  // background-color: var(--bg-color-type-1);
+  // padding: 20px;
+  border-radius: 14px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  height: calc(100svh - 240px - 16px - 0px);
+  // calc(100svh - 240px - 26px - 53px);
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 1024px) {
+    height: calc(100svh - 240px - 16px - 0px);
+  }
+  @media screen and (max-width: 824px) {
+    height: calc(100svh - 240px - 7px);
+  }
+}
+
+.paginationsButton {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1;
+}
+
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  // justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.paginationSpan {
+  margin: 0 10px;
+}
+
+.tabber {
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--accent-color);
+  &_list {
+    margin-bottom: -1px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    // margin-bottom: 10px;
+    padding: 0;
+    gap: 10px;
+  }
+  &_list_item {
+    button {
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    // padding: 10px;
+    // border: 1px solid var(--bg-color-type-1);
+  }
+}
+
+.scrollbar_custom {
+  height: auto !important;
+  flex: 1;
+}

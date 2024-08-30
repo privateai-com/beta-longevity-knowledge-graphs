@@ -1,0 +1,10 @@
+.main{
+    max-width: var(--container-max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--container-paddings);
+    flex: 1;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,141 @@
+body{
+  --text-color: #0F0F0F;
+ 
+  --bg-color: #FFFFFF;
+  --bg-color-type-1:#F3F5FF;
+
+  --divider-color: #BDC5DC;
+
+  --secondary-text-color:#7C859E;
+
+  --check-color:#3AB393;
+  --warning-color:#E0A32C;
+  --error-color:#D87676;
+  --denied-color:#D30000;
+  --accent-color:#4659FE;
+  --accent-rgb-color:rgba(70, 88, 254,0.4);
+
+  --navigation-color: transparent;
+  --navigation-active-color: var(--accent-color);
+
+  --border-type-1: 1px solid #BDC5DC;
+  --border-type-2: 1px dashed #BDC5DC;
+  --border-type-3: 2px solid #BDC5DC;
+
+  --overlay-color: #00000038;
+
+  --container-max-width:1440px;
+  --container-paddings: 0 20px;
+}
+
+body.dark{
+  --text-color: #FFFFFF;
+ 
+  --bg-color: #1B2128;
+  --bg-color-type-1:#282F37;
+
+  --divider-color: #3F4956;
+
+  --secondary-text-color:#7C859E;
+
+  --check-color:#44C2A1;
+  --warning-color:#E3AD42;
+  --error-color:#D87676;
+  --denied-color:#D30000;
+  --accent-color:#808CFF;
+
+  --navigation-color: transparent;
+  --navigation-active-color: var(--accent-color);
+
+  --border-type-1: 1px solid #343D56;
+  --border-type-2: 1px dashed #343D56;
+  --border-type-3: 2px solid #343D56;
+
+  
+  --overlay-color: #ffffff38;
+  /* Satoshi */
+
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+
+
+  font-family: 'Satoshi-Regular';
+  /* , sans-serif; */
+
+  min-height: 100svh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+
+  /* Satoshi */
+}
+
+#root{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.ReactModalPortal .ReactModal__Overlay{
+  background-color: var(--overlay-color)!important;
+}
+.ReactModalPortal{
+  z-index: 1000;
+}
+
+.scene-container{
+  width: 100%!important;
+}
+
+.scene-container canvas{
+  width: 100%!important;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  /* margin-bottom: 20px; */
+}
+p{
+  margin: 0;
+  /* margin-bottom: 10px; */
+}
+
+p:last-child{
+  margin: 0;
+}
+
+.vis-button{
+  display: none!important;
+}
+
+.ScrollbarsCustom{
+  height: 100%;
+}
+.ScrollbarsCustom-Wrapper{
+  height: 100%;
+  width: 100%;
+}
+.ScrollbarsCustom-Thumb.ScrollbarsCustom-ThumbY{
+  background: var(--accent-color)!important;
+  width: 5px!important;
+}
+
+.ScrollbarsCustom-Track.ScrollbarsCustom-TrackY{
+  width: 5px!important;
+}

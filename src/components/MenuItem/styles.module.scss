@@ -1,0 +1,14 @@
+
+.link{
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--navigation-color);
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Satoshi-Medium';
+    cursor: pointer;
+
+    &.active{
+        border-width: 2px;
+        border-color: var(--navigation-active-color);
+    }
+}

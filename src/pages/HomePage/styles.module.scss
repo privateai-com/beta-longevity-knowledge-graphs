@@ -1,0 +1,52 @@
+.logo{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    flex: 1;
+    svg{
+        margin-top: -85px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    video{
+        position: absolute;
+        left: 0;
+        top: 94.6px;
+        width: 100%;
+        height: calc(100svh - 94.6px);
+        object-fit: cover;
+        z-index: -1;
+
+        @media screen and (max-width: 824px) {
+            top: 80px;
+            height: calc(100svh - 80px);
+        }
+        @media screen and (max-width: 400px) {
+            top: 70px;
+            height: calc(100svh - 70px);
+            object-fit: contain;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 94.6px;
+        width: 100%;
+        height: calc(100svh - 94.6px);
+        z-index: 2;
+        @media screen and (max-width: 824px) {
+            top: 80px;
+            height: calc(100svh - 80px);
+        }
+        @media screen and (max-width: 400px) {
+            top: 70px;
+            height: calc(100svh - 70px);
+            object-fit: contain;
+        }
+    }
+}

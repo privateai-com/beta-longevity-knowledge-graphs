@@ -1,0 +1,30 @@
+
+
+.btn{
+    padding: 8px 23px;
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    font-size: 16px;
+    line-height: 1;
+    color: #fff;
+    font-weight: 500;
+    border-radius:8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        background-color:transparent;
+        color: var(--accent-color);
+    }
+    &:disabled{
+        background-color: gray;
+        border-color: gray;
+        &:hover{
+            background-color: gray;
+            color: #fff;
+            cursor: not-allowed;
+        }
+    }
+}

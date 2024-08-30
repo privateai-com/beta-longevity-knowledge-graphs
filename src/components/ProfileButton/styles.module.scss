@@ -1,0 +1,37 @@
+
+.modal{
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    &_inner{
+        padding: 20px;
+        background-color: var(--bg-color);
+    }
+}
+
+.profileBtn{
+    background-color: transparent;
+    border: none;
+    border-bottom: var(--border-type-2);
+    color: var(--secondary-text-color);
+    font-size: 16px;
+    padding: 5px 0;
+    border-width: 2px;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    margin-left: 23px;
+    position: relative;
+}
+
+.icon{
+    position: absolute;
+    left: -23px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 17px;
+    height: auto;
+}
