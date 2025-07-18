@@ -1,4 +1,4 @@
-import { apiPaths, bearerToken, PUBLIC_API_URL } from "../../constants/api";
+import { apiPaths, PUBLIC_API_KEY, PUBLIC_API_URL } from "../../constants/api";
 import { useContext } from "react";
 import axios from "axios";
 import styles from "./styles.module.scss";
@@ -12,8 +12,7 @@ export const ProfileButton = ({ id, username }) => {
       method: "GET",
       url: `${PUBLIC_API_URL}${apiPaths.getProfile}?profileId=${id}`,
       headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${bearerToken}`,
+        "x-api-key": PUBLIC_API_KEY,
       },
     }).then((response) => {
       const { data } = response.data;

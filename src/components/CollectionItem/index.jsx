@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  apiPaths,
-  bearerToken,
-  PUBLIC_API_KEY,
-  PUBLIC_API_URL,
-} from "../../constants/api";
+import { apiPaths, PUBLIC_API_KEY, PUBLIC_API_URL } from "../../constants/api";
 import axios from "axios";
 import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
@@ -25,8 +20,7 @@ export const CollectionItem = ({ id, className, column_className }) => {
         method: "GET",
         url: `${PUBLIC_API_URL}${apiPaths.getArticle}?articleId=${id - 1}`,
         headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${bearerToken}`,
+          "x-api-key": PUBLIC_API_KEY,
         },
       })
         .then((respopnse) => {

@@ -2,7 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FileInfo } from "./components/FileInfo";
 import axios from "axios";
-import { apiPaths, bearerToken, PUBLIC_API_URL } from "../../constants/api";
+import {
+  apiPaths,
+  bearerToken,
+  PUBLIC_API_KEY,
+  PUBLIC_API_URL,
+} from "../../constants/api";
 import { Graph3D } from "./components/Graph3D";
 import styles from "./styles.module.scss";
 import { Button } from "../../components/Button";
@@ -21,8 +26,7 @@ export const Graph = () => {
       method: "GET",
       url: `${PUBLIC_API_URL}${apiPaths.getArticle}?articleId=${graphID - 1}`,
       headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${bearerToken}`,
+        "x-api-key": PUBLIC_API_KEY,
       },
     })
       .then((response) => {
