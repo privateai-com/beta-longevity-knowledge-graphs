@@ -1,5 +1,10 @@
-import { useEffect, useState } from "react";
-import { apiPaths, PUBLIC_API_KEY, PUBLIC_API_URL } from "../../constants/api";
+import { useState } from "react";
+import {
+  apiPaths,
+  bearerToken,
+  PUBLIC_API_KEY,
+  PUBLIC_API_URL,
+} from "../../constants/api";
 import axios from "axios";
 import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
@@ -10,14 +15,9 @@ import Typography from "../Typography";
 import cx from "classnames";
 import { useMemo } from "react";
 import { Graph2D } from "../Graph2D";
-import FallbackImage from "../../assets/img/profileFallbackImage.svg";
-import FallbackImageLight from "../../assets/img/profileFallbackImageLight.svg";
-import { useContext } from "react";
-import { ThemeContext } from "../../App";
 
 export const CollectionItem = ({ id, className, column_className }) => {
   const [item, setItem] = useState(null);
-  const { theme } = useContext(ThemeContext);
 
   useMemo(() => {
     if (id) {
@@ -25,7 +25,8 @@ export const CollectionItem = ({ id, className, column_className }) => {
         method: "GET",
         url: `${PUBLIC_API_URL}${apiPaths.getArticle}?articleId=${id - 1}`,
         headers: {
-          "x-api-key": PUBLIC_API_KEY,
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${bearerToken}`,
         },
       })
         .then((respopnse) => {
