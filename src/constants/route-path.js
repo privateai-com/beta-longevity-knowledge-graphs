@@ -1,4 +1,4 @@
-import { GraphCollectionPage, HomePage } from "../pages";
+import { GraphCollectionPage } from "../pages";
 
 export const globalPaths = [
   {

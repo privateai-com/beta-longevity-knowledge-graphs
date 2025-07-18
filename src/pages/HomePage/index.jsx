@@ -1,9 +1,5 @@
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
-import { PageHead } from "../../components/PageHead";
 import { MainLayout } from "../../layouts/MainLayout";
-import styles from "./styles.module.scss";
-import videoSrc from "../../assets/video/main.mp4";
 
 export const HomePage = () => {
   return (

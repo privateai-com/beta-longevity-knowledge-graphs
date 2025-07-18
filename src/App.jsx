@@ -74,13 +74,13 @@ export const AppProvider = ({ children }) => {
                     {theme === "dark" ? (
                       <img
                         src={FallbackImage}
-                        alt="Fallback Image"
+                        alt="Fallback Image dark"
                         width="600"
                       />
                     ) : (
                       <img
                         src={FallbackImageLight}
-                        alt="Fallback Image"
+                        alt="Fallback Image light"
                         width="600"
                       />
                     )}

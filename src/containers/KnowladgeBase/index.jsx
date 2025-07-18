@@ -1,12 +1,10 @@
 import { CollectionItem } from "../../components/CollectionItem";
 import collection from "../../data/collection.json";
-import cx from "classnames";
 import styles from "./styles.module.scss";
 import { KnowladgeBaseFilter } from "./components/Filter";
 import { createContext, useState } from "react";
 import { Button } from "../../components/Button";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import Typography from "../../components/Typography";
 import { useEffect } from "react";
 import { filterConstants } from "../../constants/filterConstants";
 import Scrollbar from "react-scrollbars-custom";
@@ -109,6 +107,7 @@ export const KnowledgeBaseContainer = () => {
         search: searchParams.toString(),
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.search]);
 
   let avalibleList = 0;
